@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT -->
+
 # ![](icon.svg) Unified Controller Input Specification
 
 - [The Problem](#the-problem)
@@ -97,24 +99,7 @@ enum InputCapability {
 }
 ```
 
-The full enumeration can be found [here](input_capability.md).
-
-**NOTE: We could either use one flat enum of all capabilities, or multiple enums
-based on input value type.**
-
-E.g.
-
-```rust
-enum BinaryCapability {
-  GAMEPAD_BUTTON_GUIDE = 0,
-}
-```
-
-```rust
-enum Vector2Capability {
-  GAMEPAD_AXIS_LEFT_STICK = 0,
-}
-```
+The full enumeration can be found [here](input/capabilities.md).
 
 ## Input Value
 
@@ -403,6 +388,7 @@ different purposes:
 - `GetName`: gets the name of the controller
 - `GetVendorId`: get the vendor id of the controller
 - `GetProductId`: get the product id of the controller
+- `GetGlobalProductId`: get the global product id of the controller
 - `GetSerial`: get the serial number of the controller
 - `SetUnifiedMode`: sets the controller to be in unified input mode
 
@@ -440,3 +426,7 @@ Contributors
 * [William Edwards](https://github.com/shadowapex)
 * [Derek Clark](https://github.com/pastaq/)
 * [Denis Benato](https://github.com/NeroReflex/)
+
+## License
+
+All files and specification are licensed under MIT.
